@@ -1,0 +1,65 @@
+{
+  "name": "vape",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy",
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "migrate-supporting-v2": "node --experimental-strip-types scripts/migrate-supporting-pages-to-v2.ts",
+    "migrate-supporting-v2:dry-run": "node --experimental-strip-types scripts/migrate-supporting-pages-to-v2.ts --dry-run",
+    "import-supporting-510-hardware": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/1. 510 Hardware & Cartridges.docx\" --id-prefix supporting-510-hw-",
+    "import-supporting-510-hardware:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/1. 510 Hardware & Cartridges.docx\" --id-prefix supporting-510-hw- --dry-run",
+    "import-supporting-nicotine": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/2. Nicotine & General Vapes.docx\" --id-prefix supporting-nicotine-",
+    "import-supporting-nicotine:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/2. Nicotine & General Vapes.docx\" --id-prefix supporting-nicotine- --dry-run",
+    "import-supporting-cbd-hemp": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/3. CBD & Hemp Vapes--.docx\" --id-prefix supporting-cbd-hemp-",
+    "import-supporting-cbd-hemp:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/3. CBD & Hemp Vapes--.docx\" --id-prefix supporting-cbd-hemp- --dry-run",
+    "import-supporting-thca-thc": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/4. THCA & THC Products.docx\" --id-prefix supporting-thca-thc-",
+    "import-supporting-thca-thc:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/4. THCA & THC Products.docx\" --id-prefix supporting-thca-thc- --dry-run",
+    "import-supporting-brand": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/--5. Brand-Specific Keywords--.docx\" --id-prefix supporting-brand-",
+    "import-supporting-brand:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/--5. Brand-Specific Keywords--.docx\" --id-prefix supporting-brand- --dry-run",
+    "import-supporting-thc-bulk": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/1. THC, THCA, & THCP Bulk.docx\" --id-prefix supporting-thc-bulk-",
+    "import-supporting-thc-bulk:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/1. THC, THCA, & THCP Bulk.docx\" --id-prefix supporting-thc-bulk- --dry-run",
+    "import-supporting-cbd-bulk": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/2. CBD Bulk.docx\" --id-prefix supporting-cbd-bulk-",
+    "import-supporting-cbd-bulk:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/2. CBD Bulk.docx\" --id-prefix supporting-cbd-bulk- --dry-run",
+    "import-supporting-nicotine-bulk": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/3. Nicotine & General Bulk.docx\" --id-prefix supporting-nicotine-bulk-",
+    "import-supporting-nicotine-bulk:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/3. Nicotine & General Bulk.docx\" --id-prefix supporting-nicotine-bulk- --dry-run",
+    "import-supporting-hw-510-bulk": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/4. Hardware & 510 Bulk.docx\" --id-prefix supporting-hw-510-bulk-",
+    "import-supporting-hw-510-bulk:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/4. Hardware & 510 Bulk.docx\" --id-prefix supporting-hw-510-bulk- --dry-run",
+    "import-supporting-brand-bulk": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/5. Brand-Specific Bulk.docx\" --id-prefix supporting-brand-bulk-",
+    "import-supporting-brand-bulk:dry-run": "sanity exec ./scripts/import-supporting-pages-docx.ts -- --doc \"docs/5. Brand-Specific Bulk.docx\" --id-prefix supporting-brand-bulk- --dry-run",
+    "repatch-supporting-510-hw": "sanity exec ./scripts/repatch-supporting-510-hw-relations.ts",
+    "repatch-supporting-510-hw:dry-run": "sanity exec ./scripts/repatch-supporting-510-hw-relations.ts -- --dry-run"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/ui": "^3.2.0",
+    "@sanity/vision": "^5.28.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sanity": "^5.28.0",
+    "styled-components": "^6.1.18"
+  },
+  "devDependencies": {
+    "@sanity/client": "^7.22.0",
+    "@sanity/eslint-config-studio": "^6.0.0",
+    "@types/react": "^19.2.14",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.28",
+    "jsonrepair": "^3.14.0",
+    "prettier": "^3.5",
+    "typescript": "^5.8"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
+  }
+}
