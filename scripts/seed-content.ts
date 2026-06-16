@@ -549,6 +549,101 @@ async function seed() {
     await upsert(faq)
   }
 
+  // ─── 10. Shipping Page ──────────────────────────────────────────────────
+  await upsert({
+    _id: 'shippingPage',
+    _type: 'shippingPage',
+    title: 'Shipping Policy',
+    description: 'THCPensBulk shipping policy covering processing time, domestic and international delivery expectations, PACT Act compliance, and tracking guidance.',
+    lastUpdated: '2026-06-01',
+    sections: [
+      {_type: 'legalSection', title: '1. Processing Time', paragraphs: ['Wholesale orders are typically reviewed, verified, and prepared within 24 to 48 hours on business days after payment confirmation.', 'During high-volume periods or compliance review checks, processing may take longer. Our team will notify you by email if timing changes.']},
+      {_type: 'legalSection', title: '2. Domestic Shipping (USA)', paragraphs: ['We ship across eligible US regions using compliant carrier options that match destination requirements.', 'Estimated transit windows vary by region.'], bullets: ['Northeast and Southeast: commonly 2–4 business days after dispatch', 'Midwest and South Central: commonly 3–5 business days after dispatch', 'West Coast and remote regions: commonly 4–7 business days after dispatch']},
+      {_type: 'legalSection', title: '3. International Shipping (UK & Worldwide)', paragraphs: ['International availability depends on destination regulations, carrier serviceability, and product restrictions.', 'Contact our team before ordering for country-specific guidance on permitted product categories and delivery windows.']},
+      {_type: 'legalSection', title: '4. PACT Act Compliance', paragraphs: ['All applicable US shipments follow federal and state PACT Act requirements, including adult-signature (21+) delivery workflows and required reporting obligations where applicable.', 'Orders that do not satisfy compliance checks may be delayed, modified, or canceled.']},
+      {_type: 'legalSection', title: '5. Restricted States and Products', paragraphs: ['Some product categories may be restricted in specific US states or local jurisdictions.', 'Buyers are responsible for confirming local rules before ordering. Orders that conflict with destination law cannot be fulfilled.'], bullets: ['THC-related products are limited to jurisdictions where sale and shipment are legally permitted', 'Adult signature and age verification remain mandatory for all restricted products', 'Destination restrictions are checked before fulfillment']},
+      {_type: 'legalSection', title: '6. Tracking and Delivery Updates', paragraphs: ['Tracking details are sent once your order is dispatched. Use the provided carrier link to monitor shipment milestones.', 'If a package is delayed, returned, or undeliverable, contact support@thcpensbulk.com with your order details for assistance.']},
+    ],
+  })
+
+  // ─── 11. MOQ Page ────────────────────────────────────────────────────────
+  await upsert({
+    _id: 'moqPage',
+    _type: 'moqPage',
+    title: 'Wholesale MOQ',
+    description: 'Understand THCPensBulk minimum order requirements, mix-and-match rules, and practical examples for first and repeat wholesale orders.',
+    heroTitle: 'What Is the Minimum Order Quantity for Wholesale THC Vapes?',
+    heroIntro: 'Our minimum order quantity is 50 units per SKU. Volume price breaks apply from 200 units and 500+ units. Submit a wholesale inquiry to receive a proforma invoice within one business day.',
+    lastUpdated: '2026-06-01',
+    moqExamples: [
+      {_type: 'object', title: 'Starter Order', totalBadge: '50 units', description: 'Minimum 50 units per SKU for first-time B2B buyers. Mix categories to test shelf velocity before scaling.'},
+      {_type: 'object', title: 'Volume Tier', totalBadge: '200 units', description: 'Volume discount unlocks from 200 units per SKU. Reduced per-unit cost with fast 48-hour dispatch.'},
+      {_type: 'object', title: 'Master Case', totalBadge: '500+ units', description: 'Best per-unit pricing on 500+ units. Preferred for high-volume dispensaries and smoke shop chains.'},
+    ],
+    sections: [
+      {_type: 'legalSection', title: '1. Standard MOQ', paragraphs: ['THCPensBulk requires a minimum of 50 units per SKU for all B2B wholesale orders.', 'This minimum supports wholesale pricing integrity, stable fulfillment logistics, and dedicated account support for our B2B partners.']},
+      {_type: 'legalSection', title: '2. Mix-and-Match Policy', paragraphs: ['You may combine eligible SKUs across our Bulk THC Vapes and Bulk 510 Carts categories to reach your order volume.', 'Final basket approval depends on destination compliance and product eligibility.'], bullets: ['Mix disposable vapes and 510 cartridges across compatible categories', 'Build trial assortments for first orders before scaling reorders', 'Contact our sales team for help balancing your initial inventory basket']},
+      {_type: 'legalSection', title: '3. Volume Price Tiers', paragraphs: ['Starter tier: 50–199 units per SKU at standard wholesale pricing.', 'Volume tier: 200–499 units per SKU with reduced per-unit cost.', 'Master case tier: 500+ units per SKU at best available pricing.']},
+      {_type: 'legalSection', title: '4. Payment and Invoice Timing', paragraphs: ['MOQ is validated before invoice finalization.', 'Eligible payment-method discounts (10% crypto, 5% Revolut) are applied during invoice confirmation.']},
+    ],
+  })
+
+  // ─── 12. Locations Page ──────────────────────────────────────────────────
+  await upsert({
+    _id: 'locationsPage',
+    _type: 'locationsPage',
+    title: 'Locations & Coverage',
+    description: 'See THCPensBulk wholesale coverage across the USA, UK, and approved international markets, with region-specific compliance notes.',
+    heroTitle: 'Wholesale Shipping Locations and Coverage',
+    heroIntro: 'We support B2B wholesale delivery across the USA, UK, and selected international destinations. Every order is reviewed against destination-specific compliance and product eligibility rules before dispatch.',
+    lastUpdated: '2026-06-01',
+    mapEmbedUrl: 'https://www.google.com/maps?q=United+States&output=embed',
+    usStates: ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'],
+    internationalCoverage: [
+      {_type: 'object', title: 'United Kingdom', details: 'UK wholesale orders shipped via fully tracked, insured international freight. Compliance documentation provided.'},
+      {_type: 'object', title: 'Europe', details: 'Case-by-case support for approved EU countries with documented import compliance and duty handling.'},
+      {_type: 'object', title: 'Middle East & APAC', details: 'Distributor-led fulfillment available where customs and product rules allow. Contact us for eligibility.'},
+    ],
+    complianceNotes: [
+      {_type: 'object', region: 'US Hemp/THC Orders', note: 'Availability varies by state. Buyers are responsible for local licensing, age-gating (21+), and shelf legality. PACT Act workflows applied where required.'},
+      {_type: 'object', region: 'UK & International', note: 'Import approvals, duty structure, and SKU eligibility are validated before invoice confirmation. Buyers responsible for local import compliance.'},
+    ],
+    sections: [
+      {_type: 'legalSection', title: '1. United States Coverage', paragraphs: ['THCPensBulk supports B2B wholesale shipping across all 50 US states for eligible product categories.', 'Transit times vary by carrier route, destination, and compliance workflow requirements.'], bullets: ['All shipments reviewed for destination eligibility before release', 'Adult-signature (21+) workflow applied where required', 'PACT Act compliant freight carriers used for all applicable orders']},
+      {_type: 'legalSection', title: '2. UK & International Shipping', paragraphs: ['International orders ship via fully tracked and insured freight on approved lanes.', 'Customs, duty handling, and product-category legality must be confirmed before invoice finalization.'], bullets: ['UK wholesale shipments available with full compliance documentation', 'EU and APAC routing available for approved markets', 'Importer-of-record responsibilities remain with the buyer']},
+      {_type: 'legalSection', title: '3. Regional Compliance Notes', paragraphs: ['State and local regulations can differ for THC-adjacent categories.', 'Buyers are responsible for confirming local rules, licensing requirements, and retail restrictions in their jurisdictions.']},
+    ],
+  })
+
+  // ─── 13. Wholesale Form Config ───────────────────────────────────────────
+  await upsert({
+    _id: 'wholesaleFormConfig',
+    _type: 'wholesaleFormConfig',
+    estimatedOrderValues: [
+      {_key: 'range-500', rangeLabel: '$500 – $1,500', rangeValue: 'range-500', sortOrder: 0},
+      {_key: 'range-1500', rangeLabel: '$1,500 – $5,000', rangeValue: 'range-1500', sortOrder: 1},
+      {_key: 'range-5000', rangeLabel: '$5,000 – $10,000', rangeValue: 'range-5000', sortOrder: 2},
+      {_key: 'range-10000', rangeLabel: '$10,000+', rangeValue: 'range-10000', sortOrder: 3},
+    ],
+    paymentMethods: [
+      {_key: 'crypto', label: 'Cryptocurrency (BTC, ETH, USDT)', methodValue: 'crypto', helpText: '10% discount available', sortOrder: 0},
+      {_key: 'revolut', label: 'Revolut', methodValue: 'revolut', helpText: '5% discount available', sortOrder: 1},
+      {_key: 'bank', label: 'Bank Transfer', methodValue: 'bank', helpText: 'Contact our team for terms', sortOrder: 2},
+    ],
+    formLabels: {
+      businessNameLabel: 'Business Name', businessNameHelp: 'Your company or business name',
+      contactNameLabel: 'Contact Name', contactNameHelp: 'Primary contact person',
+      emailLabel: 'Email Address', emailHelp: "We'll send confirmation to this address",
+      phoneLabel: 'Phone Number', phoneHelp: 'Your business or personal phone number',
+      countryStateLabel: 'Country / State', countryStateHelp: 'Your location',
+      productInterestsLabel: 'Product Interests', productInterestsHelp: 'Select at least one option',
+      orderValueLabel: 'Estimated Order Value', orderValueHelp: 'Your typical monthly order range',
+      paymentMethodLabel: 'Preferred Payment Method', paymentMethodHelp: "How you'd prefer to pay",
+      notesLabel: 'Additional Notes (Optional)', notesHelp: 'Any additional information for our team',
+      submitButtonText: 'Submit Inquiry',
+    },
+  })
+
   console.log('\n🎉 Seed complete! All THCPensBulk content has been created in Sanity.')
   console.log('   → Open Sanity Studio and publish each document to make it live.')
   console.log('   → Add a hero image to the About Page (required field — Studio will prompt you).')
