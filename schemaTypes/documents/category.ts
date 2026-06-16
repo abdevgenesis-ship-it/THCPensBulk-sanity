@@ -24,11 +24,11 @@ export const category = defineType({
       type: 'string',
       options: {
         list: [
-          {title: 'Melatonin', value: 'Melatonin'},
-          {title: 'Sleep', value: 'Sleep'},
-          {title: 'Lemme', value: 'Lemme'},
-          {title: 'Natrol', value: 'Natrol'},
-          {title: 'Wholesale', value: 'Wholesale'},
+          {title: 'Disposable Vapes', value: 'Disposable Vapes'},
+          {title: '510 Cartridges', value: '510 Cartridges'},
+          {title: 'Hardware', value: 'Hardware'},
+          {title: 'Accessories', value: 'Accessories'},
+          {title: 'Wholesale Bundles', value: 'Wholesale Bundles'},
         ],
       },
       validation: (rule) => rule.required(),

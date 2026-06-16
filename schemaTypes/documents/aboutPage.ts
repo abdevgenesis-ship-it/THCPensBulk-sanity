@@ -10,7 +10,7 @@ export const aboutPage = defineType({
       title: 'SEO title',
       type: 'string',
       description: 'Browser tab title (keep unique and B2B-focused).',
-      initialValue: 'About Melatonin Gummies UK — Premium Wellness & B2B Supplier',
+      initialValue: 'About THCPensBulk — Licensed B2B Wholesale THC Vape Distributor',
       validation: (rule) => rule.required().min(20).max(120),
     }),
     defineField({
@@ -24,7 +24,7 @@ export const aboutPage = defineType({
       name: 'pageHeading',
       title: 'Page H1',
       type: 'string',
-      initialValue: 'About Melatonin Gummies UK',
+      initialValue: 'About THCPensBulk',
       validation: (rule) => rule.required().min(3).max(120),
     }),
     defineField({

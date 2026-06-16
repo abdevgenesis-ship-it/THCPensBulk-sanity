@@ -20,9 +20,9 @@ import {
 
 export default defineConfig({
   name: 'default',
-  title: 'Melatonin Gummies UK',
+  title: 'THC Pens Bulk',
 
-  projectId: '8fp9giy6',
+  projectId: 'as9s0n0w',
   dataset: 'production',
 
   plugins: [

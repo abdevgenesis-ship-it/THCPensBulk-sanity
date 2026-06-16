@@ -1,10 +1,11 @@
 {
-  "name": "vape",
+  "name": "thcpensbulk-sanity",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
+    "seed": "node --experimental-strip-types scripts/seed-content.ts",
     "build": "sanity build",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
