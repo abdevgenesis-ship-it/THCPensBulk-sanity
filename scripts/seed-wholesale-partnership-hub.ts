@@ -27,13 +27,13 @@ async function main() {
   await client
     .patch(WHOLESALE_PAGE_ID)
     .set({
-      seoTitle: 'Wholesale Vapes Partnership | B2B Programs | WholesaleVapesUSA.com',
+      seoTitle: 'Wholesale Vapes Partnership | B2B Programs | THCPensBulk.com',
       seoDescription:
-        'Partner with WholesaleVapesUSA.com: wholesale vapes, 48h shipping, B2B portal access, 5,000+ SKUs, daily price monitoring, and dedicated account support.',
+        'Partner with THCPensBulk.com: wholesale vapes, 48h shipping, B2B portal access, 5,000+ SKUs, daily price monitoring, and dedicated account support.',
       heroBadge: 'Partnership Hub',
       heroHeading: 'Wholesale vapes and bulk distribution partnership programs.',
       heroSecondaryHeading: 'Wholesale vapes account registration for professional retailers.',
-      heroSubhead: `At WholesaleVapesUSA.com, our wholesale program is built on the pillars of Consistency, Quality, and Speed. We provide a streamlined B2B portal where you can buy wholesale vapes, track your 48h shipping, and access high-resolution marketing assets for your own site.`,
+      heroSubhead: `At THCPensBulk.com, our wholesale program is built on the pillars of Consistency, Quality, and Speed. We provide a streamlined B2B portal where you can buy wholesale vapes, track your 48h shipping, and access high-resolution marketing assets for your own site.`,
       heroTrustLine1: 'Consistency · Quality · Speed',
       heroTrustLine2: '48h shipping · B2B portal',
       whyHeading: 'Why Partner With Us?',

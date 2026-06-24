@@ -45,7 +45,7 @@ const seoContent = [
         _type: 'span' as const,
         _key: 'thca-authority-tail-span',
         marks: [],
-        text: `Ordering wholesale THCA from WholesaleVapesUSA.com provides your business with the "Institutional Shield" of safety. Every THCA disposable and cart in our inventory is batch-tested to ensure it meets the highest standards of purity. We offer bulk THCA vapes at the best market prices, with a focus on high-capacity units (3g and 5g) that are currently trending. Buy THCA vapes wholesale now to capitalize on the most lucrative segment of the modern cannabinoid industry.`,
+        text: `Ordering wholesale THCA from THCPensBulk.com provides your business with the "Institutional Shield" of safety. Every THCA disposable and cart in our inventory is batch-tested to ensure it meets the highest standards of purity. We offer bulk THCA vapes at the best market prices, with a focus on high-capacity units (3g and 5g) that are currently trending. Buy THCA vapes wholesale now to capitalize on the most lucrative segment of the modern cannabinoid industry.`,
       },
     ],
   },

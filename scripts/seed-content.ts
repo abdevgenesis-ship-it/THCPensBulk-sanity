@@ -40,9 +40,9 @@ async function seed() {
       'Fast 48-hour tracked delivery across the USA, UK & Worldwide — priority same-day dispatch available.',
     announcementHref: '/shipping',
     footerWarningText:
-      'All products on THCPensBulk.com are intended strictly for distribution to licensed commercial business entities and adult consumers of legal age (21+). Not for sale to minors. Cannabinoids can affect blood pressure, heart rate, and intraocular pressure. Do not use if pregnant or nursing.',
+      'All products on THCPensBulk.com are intended strictly for distribution to licensed commercial business entities and adult consumers of legal age (21+). Not for sale to minors. Cannabinoids can affect blood pressure, heart rate, and intraocular pressure. Do not use if pregnant or nursing. Products may cause drowsiness; do not operate heavy machinery or motor vehicles after use.',
     footerComplianceText:
-      'THCPENSBULK operates as a B2B master distributor of hemp-derived vape hardware and legal cannabinoid products. All pre-filled products comply with the 2018 US Farm Bill (≤0.3% Delta-9 THC dry weight). Buyers are responsible for local compliance.',
+      'THCPENSBULK operates as a B2B master distributor of hemp-derived vape hardware and legal cannabinoid products. All pre-filled products comply with the 2018 US Farm Bill (≤0.3% Delta-9 THC dry weight). Buyers are responsible for compliance with all applicable federal, state, and local laws.',
     homepageBadge: 'THCPensBulk',
     homepageHeading: 'Bulk THC Vapes and Wholesale 510 Vape Carts for Global B2B Distribution',
     homepageSubheading:
@@ -56,7 +56,7 @@ async function seed() {
   await upsert({
     _id: 'ff42da08-7a52-4d28-9f62-016a68ca4167',
     _type: 'homePage',
-    heroBadge: 'THCPensBulk.com',
+    heroBadge: 'THCPensBulk',
     heroHeading: 'Bulk THC Vapes and Wholesale 510 Vape Carts for Global B2B Distribution',
     heroSubheading:
       "Buy Premium THC Disposable Vape Pens and Hardware at the Market's Best Wholesale Prices with Guaranteed 48-Hour Priority Shipping.",
@@ -77,7 +77,7 @@ async function seed() {
     authorityEyebrow: 'Premium B2B Hardware Supply',
     authorityHeading: 'High-Margin Wholesale THC Vape Pens and Disposable Hardware',
     authorityIntro:
-      'When it comes to sourcing a bulk THC vape or complete THC vape hardware wholesale arrays, consistency is the key differentiator for profitable operations. We supply major distributors with premium bulk THC pens and disposable THC vape pens wholesale units featuring state-of-the-art ceramic coil heating matrices and long-lasting rechargeable batteries.',
+      '**Bulk THC vapes** are one of the fastest-growing product categories in licensed cannabis retail, and at THCPensBulk we make it straightforward for dispensaries, smoke shops, and online retailers to source authentic, COA-verified inventory at true wholesale prices. As a dedicated B2B distributor, we stock a curated range of **disposable THC vape pens** and **wholesale 510 cartridges** from vetted extract labs, with a minimum order of just 50 units and volume price breaks that scale with your business.\n\n[[H2]]\n\nFor retailers sourcing **THC vape wholesale**, product authenticity and documentation are non-negotiable. Every SKU in our catalog ships with a Certificate of Analysis (COA) from an accredited third-party lab, verifying potency and residual solvents. Our supply chain is direct-from-lab, meaning you receive the same verified product your customers expect to see on licensed shelves.\n\nFor wholesale partners who need to move volume, we offer tiered pricing, flexible payment options including crypto discounts, and a dedicated account manager. Whether you operate a single storefront or manage a multi-location distribution network, our infrastructure is built to keep your supply chain uninterrupted.\n\nOur catalog spans the most in-demand formats your customers are looking for:\n\n[[OUTRO]]\n\n**Fast Tracked Shipping Across the USA, UK & Worldwide**\n\nWe understand that stockouts cost you sales. Our fulfillment network is engineered for speed: orders confirmed before our daily cutoff are packaged and handed to shipping partners within hours, with 48-hour tracked delivery as standard.\n\nDomestic USA shipments qualify for priority dispatch. International wholesale orders to the UK, Europe, and worldwide ship via tracked courier with full insurance on every consignment.',
     authorityPoints: [
       {_type: 'homeAuthorityPoint', _key: 'ap-0', title: 'Zero-Leak Hardware', description: 'Medical-grade borosilicate glass and food-grade stainless steel construction with failure rates under 0.1%.', iconKey: 'badgeCheck'},
       {_type: 'homeAuthorityPoint', _key: 'ap-1', title: 'PACT Act Compliant Shipping', description: 'All US shipments fully documented with adult signature (21+) delivery via registered freight carriers.', iconKey: 'shieldCheck'},
@@ -104,7 +104,7 @@ async function seed() {
     howToSteps: [
       {_type: 'homeHowToStep', _key: 'step-0', title: 'Browse', description: 'Explore our bulk THC vapes and 510 cart categories to find the right SKUs for your store or distribution channel.', iconKey: 'search'},
       {_type: 'homeHowToStep', _key: 'step-1', title: 'Submit', description: 'Send your business details, product interests, and estimated volume via our wholesale application form.', iconKey: 'send'},
-      {_type: 'homeHowToStep', _key: 'step-2', title: 'Invoice', description: 'Receive a formal quote or invoice with payment options (crypto, Revolut, or other arrangements).', iconKey: 'packageCheck'},
+      {_type: 'homeHowToStep', _key: 'step-2', title: 'Invoice', description: 'Receive a formal quote or invoice with payment options (crypto, Revolut, or other arrangements).', iconKey: 'mail'},
       {_type: 'homeHowToStep', _key: 'step-3', title: 'Ship', description: 'Orders ship after confirmation with guaranteed 48-hour priority delivery and full tracking provided.', iconKey: 'packageCheck'},
     ],
     howToCtaLabel: 'Start Your Order',
